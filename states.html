@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>安否登録</title>
+<link rel="stylesheet" href="./css/states.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>安否登録</h2>
+
+    <form id="statusForm">
+        <label>安否状態</label>
+        <select id="status" required>
+            <option value="">選択してください</option>
+            <option value="無事">無事</option>
+            <option value="軽傷">軽傷</option>
+            <option value="重傷">重傷</option>
+        </select>
+
+        <label>ケガの詳細</label>
+        <textarea id="injury"></textarea>
+
+        <label>出社可能か</label>
+        <select id="work">
+            <option value="yes">可能</option>
+            <option value="no">不可</option>
+        </select>
+
+        <label>コメント</label>
+        <textarea id="comment"></textarea>
+
+        <button type="submit">登録</button>
+        <p id="msg"></p>
+    </form>
+
+    <button onclick="logout()">ログアウト</button>
+</div>
+
+<script src="./js/states.js"></script>
+</body>
+</html>

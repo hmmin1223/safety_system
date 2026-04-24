@@ -1,0 +1,107 @@
+/* 全体 */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナ */
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* タイトル */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ラベル */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* 入力系 */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* textarea高さ */
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* ログアウトボタン */
+.logout-btn {
+    background: #dc3545;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* メッセージ */
+#msg {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* エラー */
+.error {
+    color: red;
+}
+
+/* 成功 */
+.success {
+    color: green;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
