@@ -1,43 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <title>安否登録</title>
-<link rel="stylesheet" href="./css/states.css">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+</style>
 </head>
+
 <body>
 
-<div class="container">
-    <h2>安否登録</h2>
+<!-- 🔥 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">安否システム</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">安否登録</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">安否一覧</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">プロフィール</a>
+        </li>
+
+      </ul>
+
+      <button class="btn btn-danger" onclick="logout()">ログアウト</button>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔥 FORM -->
+<div class="container mt-5">
+  <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
+
+    <h3 class="text-center mb-4">安否登録</h3>
 
     <form id="statusForm">
-        <label>安否状態</label>
-        <select id="status" required>
-            <option value="">選択してください</option>
-            <option value="無事">無事</option>
-            <option value="軽傷">軽傷</option>
-            <option value="重傷">重傷</option>
+
+      <div class="mb-3">
+        <label class="form-label">安否状態</label>
+        <select id="status" class="form-select" required>
+          <option value="">選択してください</option>
+          <option value="無事">無事</option>
+          <option value="軽傷">軽傷</option>
+          <option value="重傷">重傷</option>
         </select>
+      </div>
 
-        <label>ケガの詳細</label>
-        <textarea id="injury"></textarea>
+      <div class="mb-3">
+        <label class="form-label">ケガの詳細</label>
+        <textarea id="injury" class="form-control"></textarea>
+      </div>
 
-        <label>出社可能か</label>
-        <select id="work">
-            <option value="yes">可能</option>
-            <option value="no">不可</option>
+      <div class="mb-3">
+        <label class="form-label">出社可能か</label>
+        <select id="work" class="form-select">
+          <option value="yes">可能</option>
+          <option value="no">不可</option>
         </select>
+      </div>
 
-        <label>コメント</label>
-        <textarea id="comment"></textarea>
+      <div class="mb-3">
+        <label class="form-label">コメント</label>
+        <textarea id="comment" class="form-control"></textarea>
+      </div>
 
-        <button type="submit">登録</button>
-        <p id="msg"></p>
+      <button type="submit" class="btn btn-success w-100">登録</button>
+
+      <p id="msg" class="text-center mt-3"></p>
+
     </form>
-
-    <button onclick="logout()">ログアウト</button>
+  </div>
 </div>
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your JS -->
 <script src="./js/states.js"></script>
+
+<script>
+function logout() {
+    alert("ログアウトしました");
+    window.location.href = "login.html"; // change if needed
+}
+</script>
+
 </body>
 </html>

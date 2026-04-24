@@ -5,13 +5,13 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     const pass = document.getElementById("password").value;
     const error = document.getElementById("error");
 
-    if(user === "" || pass === ""){
-        error.textContent = "入力してください";
-        return;
-    }
+    // if(user === "" || pass === ""){
+    //     error.textContent = "入力してください";
+    //     return;
+    // }
 
     // 仮ログイン（後でPHPに変更）
-    if(user === "admin" && pass === "1234"){
+    if(user === "admin" && pass === "1"){
         window.location.href = "../states.html";
     } else {
         error.textContent = "ログイン失敗";
