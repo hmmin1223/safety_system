@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>管理者用メニュー画面</title>
+</head>
+<body>
+
+    <header>
+        <table>
+            <tr>
+                <td>
+                    TEST株式会社
+                </td>
+                <td>
+                    ログイン中:<span>管理者</span> 
+                </td>
+                <td>
+                    <form action="/logout" method="POST" style="display: inline;">
+                        <button type="submit">ログアウト</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <h2>社員一覧</h2>
+
+        <fieldset>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td>
+                        <label for="search">検索: </label>
+                        <input type="text" id="search" placeholder="氏名などまたは部署">
+                    </td>
+                    <td width="50"></td> <td>
+                        <label for="sort">並び替え: </label>
+                        <select id="sort">
+                            <option value="asc">a-z (昇順)</option>
+                            <option value="desc">z-a (降順)</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button">実行</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr bgcolor="#eeeeee">
+                    <th>社員記号</th>
+                    <th>氏名</th>
+                    <th>部署</th>
+                    <th>安否状況</th>
+                    <th>ユーザーレベル</th>
+                    <th>管理者確認</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A001</td>
+                    <td>田中　太郎</td>
+                    <td>IT部</td>
+                    <td></td>
+                    <td>一般社員</td>
+                    <td>
+                        <input type="checkbox" id="confirm1"> <label for="confirm1">確認</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>A002</td>
+                    <td>山本　太郎</td>
+                    <td>IT部</td>
+                    <td></td>
+                    <td>一般社員</td>
+                    <td>
+                        <input type="checkbox" id="confirm1"> <label for="confirm1">確認</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>A003</td>
+                    <td>高橋　太郎</td>
+                    <td>IT部</td>
+                    <td></td>
+                    <td>管理者</td>
+                    <td>
+                        <input type="checkbox" id="confirm1"> <label for="confirm1">確認</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <hr>
+    <footer>
+        <p><small>被害安否報告システム - TEST株式会社</small></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規社員登録 - 安否確認システム</title>
+    <link rel="stylesheet" href="./css/newEmployee_form.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>新規社員登録</h2>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td class="label">社員番号 <span class="required">(必須)</span></td>
+                <td><input type="text" name="employee_id" placeholder="例: 123456" required></td>
+            </tr>
+            
+            <tr>
+                <td class="label">氏名 <span class="required">(必須)</span></td>
+                <td><input type="text" name="full_name" placeholder="例: 山田 太郎" required></td>
+            </tr>
+
+            <tr>
+                <td class="label">メールアドレス</td>
+                <td><input type="email" name="email" placeholder="example@company.com"></td>
+            </tr>
+
+            <tr>
+                <td class="label">部署</td>
+                <td>
+                    <select name="department">
+                        <option value="">-- 選択してください --</option>
+                        <option value="soumu">総務部</option>
+                        <option value="jinji">人事部</option>
+                        <option value="eigyo">営業部</option>
+                        <option value="kaihatsu">開発部</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">権限</td>
+                <td>
+                    <input type="radio" name="role" value="user" id="role_user" checked> <label for="role_user">一般社員</label>
+                    <input type="radio" name="role" value="admin" id="role_admin"> <label for="role_admin">管理者</label>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-area">
+            <a href="admin_menu.php" class="btn-back">戻る</a>
+            <button type="submit" class="btn-submit">登録する</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
